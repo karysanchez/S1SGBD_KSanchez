@@ -927,7 +927,7 @@ INSERT INTO  pago VALUES  (30,'PayPal','ak-std-000024','2019-01-16',7863);
 INSERT INTO  pago VALUES  (35,'PayPal','ak-std-000025','2017-10-06',3321);
 INSERT INTO  pago VALUES  (38,'PayPal','ak-std-000026','2016-05-26',1171);
 
--- fetch 
+-- CONSULTAS
 SELECT * FROM pago WHERE codigoCliente = 15;
 SELECT * FROM empleado WHERE apellido2 = 'Carrasco';
 SELECT * FROM empleado WHERE codigoEmpleado=29;

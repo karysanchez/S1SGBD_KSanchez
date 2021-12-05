@@ -937,7 +937,22 @@ INSERT INTO  pago VALUES  (30,'PayPal','ak-std-000024','2019-01-16',7863);
 INSERT INTO  pago VALUES  (35,'PayPal','ak-std-000025','2017-10-06',3321);
 INSERT INTO  pago VALUES  (38,'PayPal','ak-std-000026','2016-05-26',1171);
 
--- fetch 
+-- CONSULTAS
+--1
+select codigooficina, ciudad from oficina;
+--2
+select ciudad, telefono from oficina where pais='España';
+--3
+select nombre, apellido1, apellido2,email from empleado where codigojefe = 7;  
+--4
+select b.puesto, b.nombre, b.apellido1, b.apellido2, b.email  from empleado e inner join empleado b on e.codigojefe = b.codigoempleado group by b.puesto, b.nombre, b.apellido1, b.apellido2, b.email;
+--5
+select puesto, nombre, apellido1, apellido2 from empleado where puesto != 'Representante Ventas'; 
+--6
+select nombrecliente from cliente where pais = 'Spain';
+--7
+select c.nombrecliente, e.nombre, e.apellido1, e.apellido2 from cliente c inner join empleado e on c.codigoempleado_repventas = e.codigoempleado;
+
 SELECT * FROM pago WHERE codigoCliente = 15;
 SELECT * FROM empleado WHERE apellido2 = 'Carrasco';
 SELECT * FROM empleado WHERE codigoEmpleado=29;
